@@ -21,7 +21,7 @@ function clearOutputCookies() {
 
 const cookieValue = document.cookie
   .split("; ")
-  .find((row) => row.startsWith("test2="))
+  .find((row) => row.startsWith("favorite_task="))
   ?.split("=")[1];
 
 function showCookieValue() {
@@ -43,7 +43,7 @@ function doOnce() {
       "session=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
     const output = document.getElementById("do-once");
-    output.textContent = "> Do something here!";
+    output.textContent = "> Updated session cookie data!";
   }
 }
 
@@ -61,7 +61,7 @@ function resetOnce() {
     "session=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
   const output = document.getElementById("reset-once");
-  output.textContent = "> Reset!";
+  output.textContent = "> Reset session cookie data!";
 }
 
 function clearOutputResetOnce() {
