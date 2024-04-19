@@ -30,6 +30,11 @@ function showCookieValue() {
   output.textContent = `> The "favorite_task" cookie has value: ${cookieValue}`;
 }
 
+function clearOutputCookieValue() {
+  const output = document.getElementById("cookie-value");
+  output.textContent = "";
+}
+
 function doOnce() {
   if (
     !document.cookie
@@ -55,6 +60,11 @@ function resetOnce() {
 
   const output = document.getElementById("reset-once");
   output.textContent = '> Reset "session" cookie!';
+}
+
+function clearOutputResetOnce() {
+  const output = document.getElementById("reset-once");
+  output.textContent = "";
 }
 
 function checkACookieExists() {
