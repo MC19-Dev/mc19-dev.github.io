@@ -28,7 +28,7 @@ const cookieValue = document.cookie
 
 function showCookieValue() {
   const output = document.getElementById("cookie-value");
-  output.textContent = `> The "favorite_task cookie has value: ${cookieValue}`;
+  output.textContent = `> The "favorite_task" cookie has value: ${cookieValue}`;
 }
 
 function doOnce() {
@@ -41,7 +41,7 @@ function doOnce() {
       "session=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
     const output = document.getElementById("do-once");
-    output.textContent = "> Updated session cookie data!";
+    output.textContent = '> Updated "session" cookie data!';
   }
 }
 
@@ -52,10 +52,10 @@ function clearOutputDoOnce() {
 
 function resetOnce() {
   document.cookie =
-    "session=Test GDPR; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+    "session=TestGDPR; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
   const output = document.getElementById("reset-once");
-  output.textContent = "> Reset session cookie!";
+  output.textContent = '> Reset "session" cookie!';
 }
 
 function checkACookieExists() {
