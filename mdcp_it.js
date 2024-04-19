@@ -1,15 +1,14 @@
 document.cookie = "session=test GDPR";
 document.cookie = "favorite_task=collect Data";
-
-function alertCookie() { 
-  alert(document.cookie); 
-}
-
 document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 document.cookie = "test1=Hello; SameSite=None; Secure";
 document.cookie = "test2=World; SameSite=None; Secure";
 document.cookie = "reader=1; SameSite=None; Secure";
+
+function alertCookie() { 
+  alert(document.cookie); 
+}
 
 function showCookies() {
   const output = document.getElementById("cookies");
@@ -52,7 +51,7 @@ function clearOutputDoOnce() {
 
 function resetOnce() {
   document.cookie =
-    "session=TestGDPR; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+    "session=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 
   const output = document.getElementById("reset-once");
   output.textContent = '> Reset "session" cookie!';
